@@ -51,7 +51,6 @@
     function konten(input){
         let output = '';
         let i = 0;              
-        var search = items[1][1].toLowerCase().search(input.toLowerCase())
         while(items[i]){
             if(items[i][1].toLowerCase().search(input.toLowerCase())>=0){
                 output += `
@@ -62,7 +61,7 @@
                             <h5 class="card-title" id="itemName">`+items[i][1]+`</h5>
                             <p class="card-text" id="itemDesc">`+items[i][3]+`</p>
                             <p class="card-text">Rp `+items[i][2].toLocaleString()+`</p>
-                            <a href="#" class="addBelanja btn btn-primary" id="addCart" name"`+items[i][0]+`">Tambahkan ke keranjang</a>
+                            <a href="#" class="addBelanja btn btn-primary" id="addCart">Tambahkan ke keranjang</a>
                         </div>
                     </div>
                 </div>
