@@ -32,7 +32,7 @@
 </html>
 
 <script>
-
+    //release 0
     var items = [
         ['001', 'Keyboard Logitek', 60000, 'Keyboard yang mantap untuk kantoran', 'logitek.png'], 
         ['002', 'Keyboard MSI', 300000, 'Keyboard gaming MSI mekanik', 'msi.png'],
@@ -41,8 +41,7 @@
     ]
 
     let form = document.getElementById("formItem");
-
-    //release 0
+       
     function konten(input){
         let output = '';
         let i = 0;              
@@ -74,11 +73,11 @@
     })
 
     //release 2
-    var keranjang = document.getElementById("cart");
-    var angkaKeranjang = keranjang.value;
+    var chart = document.getElementById("cart");
+    var chart_total = chart.value;
 
     function addCart(){
-        angkaKeranjang ++;
-        keranjang.innerHTML = `<i class="fas fa-shopping-cart"></i>(${angkaKeranjang})`
+        chart_total ++;
+        chart.innerHTML = `<i class="fas fa-shopping-cart"></i>(${chart_total})`
     }
 </script>
