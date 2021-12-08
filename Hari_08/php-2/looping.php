@@ -61,17 +61,18 @@
         */
 
         $numbers = [18, 45, 29, 61, 47, 34];
+        $rest = [];
         echo "array numbers: ";
         print_r($numbers);
         // Lakukan Looping di sini
         echo "<br><br>";
         echo "Array sisa baginya adalah:  "; 
 
-        $i = 0;
-        while($i < count($numbers)){
-            echo "<br>Modulo dari ".$numbers[$i]." = ".$numbers[$i]%5;
-            $i ++;
+       
+        for($i=0;$i < count($numbers);$i ++){
+            array_push($rest, $numbers[$i]%5);
         }
+        print_r($rest);
 
         echo "<br>";
         echo "<h3> Soal No 3 Looping Asociative Array </h3>";
