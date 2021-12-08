@@ -61,18 +61,26 @@
         */
 
         $numbers = [18, 45, 29, 61, 47, 34];
-        $rest = [];
         echo "array numbers: ";
         print_r($numbers);
         // Lakukan Looping di sini
         echo "<br><br>";
         echo "Array sisa baginya adalah:  "; 
 
-       
-        for($i=0;$i < count($numbers);$i ++){
-            array_push($rest, $numbers[$i]%5);
+        // // Cara for loop
+        // $rest = [];
+        // for($i=0;$i < count($numbers);$i ++){
+        //     array_push($rest, $numbers[$i]%5);
+        // }
+        // print_r($rest);
+
+        // Cara foreach loop
+        foreach($numbers as $value){
+            $rest[] = $value %= 5;
         }
         print_r($rest);
+
+
 
         echo "<br>";
         echo "<h3> Soal No 3 Looping Asociative Array </h3>";
@@ -95,16 +103,29 @@
             ['003', 'Mouse Genius', 50000, 'Mouse Genius biar lebih pinter', 'genius.jpeg'],
             ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpeg']
         ];
-
-        $keys = ['id', 'name','price', 'description', 'source'];
         
         // Output: 
 
+        //cara for loop
+        $keys = ['id', 'name','price', 'description', 'source'];
         echo "<pre>";
         for($i=0;$i<count($items);$i++){
             print_r(array_combine($keys,$items[$i]));
         }
         echo "<pre>";
+
+        // // cara foreach loop
+        // foreach($items as $key => $value){
+        //     $item =  array(
+        //         'id' => $value[0],
+        //         'name' => $value[1],
+        //         'price' => $value[2],
+        //         'description' => $value[3],
+        //         'source' => $value[4]
+        //     );
+        //     print_r($item);
+        //     echo "<br>";
+        // }
         
         echo "<h3>Soal No 4 Asterix </h3>";
         /* 
